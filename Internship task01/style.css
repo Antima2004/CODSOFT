@@ -19,7 +19,7 @@
   .top-bar {
     display: flex;
     justify-content: space-evenly;
-    background: linear-gradient(to right, #f8a03f, #f5507b,#ff69b4);
+    background: linear-gradient(90deg, rgb(254, 183, 91) 0%, rgb(222, 64, 187) 100%);
     align-items: center;
     font-size: 0.9em;
     padding: 10px;
@@ -84,10 +84,41 @@
   }
   
   .hero {
-    text-align: center;
+    text-align: left;
     padding: 100px 20px;
-    background: url('hero-background.jpg') no-repeat center center/cover;
+    background: url('./images/bg-photo.jpeg') no-repeat center center/cover;
     color: white;
+    opacity: 0.7;
+    position: relative;
+  }
+
+
+  .line {
+    position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding-left: 20px;
+    margin-left: 13rem;
+  }
+
+  .hero-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to left, #de40bb, #feb75b);
   }
   
   .hero h2 {
@@ -100,16 +131,27 @@
   }
   
   .hero p {
-    max-width: 600px;
     margin: 0 auto;
+    text-align: left;
   }
   
-  .hero button {
-    background-color: #ff69b4;
+  .hero .read-btn {
+    background: linear-gradient(90deg, rgb(254, 183, 91) 0%, rgb(222, 64, 187) 100%);
     color: white;
     border: none;
     padding: 10px 20px;
     margin: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+  .hero .btn{
+    background: none;
+    color: #fff;
+    border:2px solid white;
+    border-radius: 50px;
+    padding:10px 20px;
+    margin:10px;
     cursor: pointer;
   }
   
@@ -117,7 +159,7 @@
     display: flex;
     justify-content: space-around;
     padding: 50px 0;
-    background: linear-gradient(to right, #f8a03f, #f5507b);
+    background: linear-gradient(90deg, rgb(254, 183, 91) 0%, rgb(222, 64, 187) 100%);
     color: white;
   }
   
@@ -125,41 +167,215 @@
     text-align: center;
     width: 30%;
   }
-  
-  .about {
-    text-align: center;
-    padding: 50px 20px;
+
+  .feature-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+  }
+
+  .feature-icon i{
+    display: flex;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature-box p{
+    text-align: justify;
+    padding: 10px;
+    margin-left: 106px;
   }
   
-  .about h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
   }
-  
-  .services {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+
+  .about-content {
+    flex: 2;
   }
-  
-  .services h2 {
-    font-size: 2em;
+
+  .about-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
     margin-bottom: 20px;
   }
-  
-  .service-box {
+
+  .about-content h2:after {
+    content: "";
+    width: 10%;
+    background: linear-gradient(to left, #de40bb, #feb75b);
+    display: block;
+    height: 5px;
+    margin-top: 12px;
+    border-radius: 30px;
+}
+
+  .about-text {
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: #818a9b;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+  }
+
+  .highlight {
+    font-weight: bold;
+    color: #222222;
+    font-size: 22px;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .read-more-btn {
     display: inline-block;
-    width: 30%;
-    padding: 20px;
-    background: white;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, rgb(254, 183, 91) 0%, rgb(222, 64, 187) 100%);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
   }
-  
-  footer {
+
+  .read-more-btn:hover {
+    background-color: #d13c6b;
+  }
+
+  .about-image {
+    flex: 1;
     text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
   }
-  
+
+  .about-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about-image {
+      margin-top: 20px;
+    }
+  }
+
+  .back{
+    background-color: #edeef0;
+  }
+
+  /* Services Container */
+  .services-section {
+    max-width: 1000px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  /* Title Styling */
+  .services-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: bold;
+    display: inline-block;
+    color: #333;
+  }
+
+  .services-section h2::after {
+    content: "";
+    width: 50%;
+    background: linear-gradient(90deg, rgb(254, 183, 91) 0%, rgb(222, 64, 187) 100%);
+    display: block;
+    height: 5px;
+    margin-top: 12px;
+    border-radius: 30px;
+  }
+
+  /* Services List */
+  .service-list {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap:100px;
+  }
+
+  /* Individual Service Item */
+  .service-item {
+    border-radius: 1px;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  /* Service Image Styling */
+  .service-item img {
+    width: 97%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 1px;
+  }
+
+  /* Service Title and Icon */
+  .service-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -20px;
+    margin-left: 112px;
+    font-weight: bold;
+    font-size: 10px;
+    background-color: white;
+    padding: 3px;
+    border-radius: 80px 4px 4px 80px;
+  }
+
+  .service-title span {
+    margin-left: 8px;
+    color: #333;
+  }
+
+  /* Icon Placeholder */
+  .icon-placeholder {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgb(254, 183, 91) 0%, rgb(222, 64, 187) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+  }
+
+  /* Retina Ready Icon Styling */
+  .retina-icon {
+    font-size: 36px;
+  }

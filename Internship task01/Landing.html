@@ -25,7 +25,7 @@
       <button class="consult-button">Request a Consult</button>
     </div>
     <div class="navbar">
-      <h1 class="logo"><img src="landing-page.png" alt="">Landing Page</h1>
+      <h1 class="logo"><img src="./images/landing-page.png" alt="">Landing Page</h1>
       <nav>
         <a href="#">Home</a>
         <a href="#">Blog</a>
@@ -40,50 +40,85 @@
   </header>
 
   <section class="hero">
+    <div class="line"></div>
+    <div class="hero-content">
     <h2>We Are Creative</h2>
     <h1>Creative Digital Agency</h1>
     <p>Lorem Ipsum has been the industry's standard dummy text since the 1500s when an unknown printer took a galley of type.</p>
-    <button>Read More</button>
-    <button>Request a Consult</button>
+    <button class="read-btn">Read More</button>
+    <button class="btn">Request a Consult</button>
+   </div>
   </section>
 
   <section class="features">
     <div class="feature-box">
-      <h3>Launch Business</h3>
+      <div class="feature-icon">
+        <i class="fa-solid fa-rocket"></i>
+        <h3>Launch Business</h3>
+     </div>
       <p>Lorem Ipsum has been the industry's standard dummy text.</p>
     </div>
     <div class="feature-box">
-      <h3>Online Support Team</h3>
+      <div class="feature-icon">
+        <i class="fa-solid fa-headphones"></i>
+        <h3>Online Support Team</h3>
+      </div>
       <p>Lorem Ipsum has been the industry's standard dummy text.</p>
     </div>
     <div class="feature-box">
-      <h3>Time Management</h3>
+      <div class="feature-icon">
+        <i class="fa-regular fa-clock"></i>
+        <h3>Time Management</h3>
+      </div>
       <p>Lorem Ipsum has been the industry's standard dummy text.</p>
     </div>
   </section>
 
-  <section class="about">
-    <h2>About Us</h2>
-    <p>15 years, we passionate about achieving better results for our clients.</p>
-    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-    <button>Read More</button>
-  </section>
-
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="service-box">
-      <h3>User Experience</h3>
+  <section class="about-section">
+    <div class="about-content">
+      <h2 class="about-title">About Us</h2>
+      <p class="about-text">
+        <h3 class="highlight">15 years, we passionate about achieving better results for our clients</h3>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, et quasi quo omnis voluptatem non hic eaque? Possimus exercitationem saepe quidem, amet tenetur cumque necessitatibus quae. Et ipsum porro, qui totam possimus praesentium? Repellat incidunt 
+      </p>
+      <a href="#more" class="read-more-btn">Read More</a>
     </div>
-    <div class="service-box">
-      <h3>Creative Design</h3>
-    </div>
-    <div class="service-box">
-      <h3>Retina Ready</h3>
+    <div class="about-image">
+      <img src="./images/person.png" alt="Our Team">
     </div>
   </section>
 
-  <footer>
-    <p>© 2023 Landing Page. All Rights Reserved.</p>
-  </footer>
+<div class="back">
+  <section class="services-section">
+    <h2>OUR SERVICES</h2>
+    <div class="service-list">
+      <!-- Service Item 1: User Experience -->
+      <div class="service-item">
+        <img src="./images/bg-photo.jpeg" alt="User Experience Image">
+        <div class="service-title">
+          <div class="icon-placeholder">A</div>
+          <span>USER EXPERIENCE</span>
+        </div>
+      </div>
+  
+      <!-- Service Item 2: Creative Design -->
+      <div class="service-item">
+        <img src="./images/bg-photo.jpeg" alt="Creative Design Image">
+        <div class="service-title">
+          <div class="icon-placeholder">B</div>
+          <span>CREATIVE DESIGN</span>
+        </div>
+      </div>
+  
+      <!-- Service Item 3: Retina Ready -->
+      <div class="service-item">
+        <div class="service-title">
+          <div class="icon-placeholder">B</div>
+          <span>RETINA READY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 </body>
 </html>

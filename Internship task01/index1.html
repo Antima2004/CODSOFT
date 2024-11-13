@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services Section</title>
+<style>
+  /* General Styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  /* Services Container */
+  .services-section {
+    max-width: 1000px;
+    text-align: center;
+  }
+
+  /* Title Styling */
+  .services-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: bold;
+    display: inline-block;
+    color: #333;
+  }
+
+  .services-section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ff6b6b;
+    margin: 5px auto 0;
+  }
+
+  /* Services List */
+  .service-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* Individual Service Item */
+  .service-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Service Image Styling */
+  .service-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  /* Service Title and Icon */
+  .service-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .service-title span {
+    margin-left: 8px;
+    color: #333;
+  }
+
+  /* Icon Placeholder */
+  .icon-placeholder {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b6b, #ffbb6b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+  }
+
+  /* Retina Ready Icon Styling */
+  .retina-icon {
+    font-size: 36px;
+  }
+</style>
+</head>
+<body>
+
+<div class="services-section">
+  <h2>OUR SERVICES</h2>
+  <div class="service-list">
+    <!-- Service Item 1: User Experience -->
+    <div class="service-item">
+      <img src="user-experience.jpg" alt="User Experience Image">
+      <div class="service-title">
+        <div class="icon-placeholder">A</div>
+        <span>USER EXPERIENCE</span>
+      </div>
+    </div>
+
+    <!-- Service Item 2: Creative Design -->
+    <div class="service-item">
+      <img src="creative-design.jpg" alt="Creative Design Image">
+      <div class="service-title">
+        <div class="icon-placeholder">B</div>
+        <span>CREATIVE DESIGN</span>
+      </div>
+    </div>
+
+    <!-- Service Item 3: Retina Ready -->
+    <div class="service-item">
+      <div class="retina-icon">💲</div>
+      <div class="service-title">
+        <span>RETINA READY</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
